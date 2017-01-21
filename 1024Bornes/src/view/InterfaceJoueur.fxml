@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlleur.ControlleurIJ">
    <children>
       <Pane layoutX="-8.0" prefHeight="720.0" prefWidth="1280.0">
          <children>
@@ -20,15 +20,15 @@
                   <Button alignment="BOTTOM_CENTER" layoutX="279.0" layoutY="132.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="83.0" text="Button" />
                </children>
             </Pane>
-            <Pane layoutX="320.0" layoutY="550.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #429a4e;">
+            <Pane fx:id="pj1" layoutX="320.0" layoutY="550.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #429a4e;">
                <children>
-                  <Button layoutX="8.0" layoutY="7.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="100.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="474.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="193.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="379.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="285.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Label layoutX="581.0" layoutY="140.0" text="..." textFill="WHITE">
+                  <Button onAction="#dobj11" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj12" layoutX="100.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj13" layoutX="474.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj14" layoutX="193.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj15" layoutX="379.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj16" layoutX="285.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Label fx:id="nj1" layoutX="581.0" layoutY="140.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -69,15 +69,15 @@
                      </children></Pane>
                </children>
             </Pane>
-            <Pane layoutX="14.0" layoutY="8.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #e49943;">
+            <Pane fx:id="pj2" layoutX="14.0" layoutY="8.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #e49943;">
                <children>
-                  <Button layoutX="385.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="477.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="851.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="570.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="756.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="662.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Label layoutX="10.0" layoutY="142.0" text="..." textFill="WHITE">
+                  <Button onAction="#dobj21"layoutX="385.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj22" layoutX="477.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj23" layoutX="851.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj24" layoutX="570.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj25" layoutX="756.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj26" layoutX="662.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Label fx:id="nj2" layoutX="10.0" layoutY="142.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -118,15 +118,15 @@
                      </children></Pane>
                </children>
             </Pane>
-            <Pane layoutX="14.0" layoutY="180.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #7192e0;">
+            <Pane fx:id="pj3" layoutX="14.0" layoutY="180.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #7192e0;">
                <children>
-                  <Button layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="104.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="197.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="11.0" layoutY="171.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="104.0" layoutY="172.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="197.0" layoutY="173.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Label layoutX="9.0" layoutY="507.0" text="..." textFill="WHITE">
+                  <Button onAction="#dobj31" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj32" layoutX="104.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj33" layoutX="197.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj34" layoutX="11.0" layoutY="171.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj35" layoutX="104.0" layoutY="172.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj36" layoutX="197.0" layoutY="173.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Label fx:id="nj3" layoutX="9.0" layoutY="507.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -167,15 +167,15 @@
                      </children></Pane>
                </children>
             </Pane>
-            <Pane layoutX="976.0" layoutY="8.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #e46464;">
+            <Pane fx:id="pj4" layoutX="976.0" layoutY="8.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #e46464;">
                <children>
-                  <Button layoutX="11.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="105.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="198.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="12.0" layoutY="370.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="105.0" layoutY="371.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button layoutX="198.0" layoutY="372.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Label layoutX="10.0" text="..." textFill="WHITE">
+                  <Button onAction="#dobj41" layoutX="11.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj42" layoutX="105.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj43" layoutX="198.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj44" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj45" layoutX="105.0" layoutY="371.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button onAction="#dobj46" layoutX="198.0" layoutY="372.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Label fx:id="nj4" layoutX="10.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
