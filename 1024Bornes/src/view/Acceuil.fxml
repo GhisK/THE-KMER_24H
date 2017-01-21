@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" styleClass="AnchorPane" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="57.0" layoutY="56.0" prefHeight="25.0" prefWidth="172.0" text="Nombre de Joueurs :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="262.0" layoutY="56.0" prefWidth="150.0" />
+      <Label layoutX="150.0" layoutY="152.0" prefHeight="39.0" prefWidth="85.0" text="Joueur 1 :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="323.0" text="Joueur 4 :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="270.0" text="Joueur 3 :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="214.0" prefHeight="22.0" prefWidth="85.0" text="Joueur 2 :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="262.0" layoutY="155.0" prefHeight="33.0" prefWidth="149.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="262.0" layoutY="209.0" prefHeight="33.0" prefWidth="149.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="262.0" layoutY="314.0" prefHeight="33.0" prefWidth="149.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="262.0" layoutY="264.0" prefHeight="33.0" prefWidth="149.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="71.0" layoutY="97.0" prefHeight="25.0" prefWidth="158.0" text="Point de Depart :">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="262.0" layoutY="93.0" prefHeight="33.0" prefWidth="149.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
