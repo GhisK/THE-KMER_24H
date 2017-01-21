@@ -10,6 +10,11 @@ import javafx.scene.layout.Pane;
 
 public class ControlleurIJ {
 	
+	public static String j1;
+	public static String j2;
+	public static String j3;
+	public static String j4;
+	
 	@FXML private Pane pj1;
 	@FXML private Pane pj2;
 	@FXML private Pane pj3;
@@ -43,10 +48,19 @@ public class ControlleurIJ {
 	@FXML private Button bj45;
 	@FXML private Button bj46;
 	
-	@FXML private Label nj1;
-	@FXML private Label nj2;
-	@FXML private Label nj3;
-	@FXML private Label nj4;
+	@FXML private static Label nj1;
+	@FXML private static Label nj2;
+	@FXML private static Label nj3;
+	@FXML private static Label nj4;
+	
+	
+	static void nameJoueur(String j1,String j2,String j3,String j4){
+		 System.out.println("j1"+j1);
+		nj1.setText(j1);
+		nj2.setText(j2);
+		nj3.setText(j3);
+		nj4.setText(j4);
+	}
 	
 	/**/
 	@FXML
