@@ -138,7 +138,6 @@ public class Contoller_Acceuil implements Initializable{
 			}
 	     }
 	     
-	     System.out.println("doStart +++ " + p1.getChildren().toString() );
 	}
 	
 	@FXML

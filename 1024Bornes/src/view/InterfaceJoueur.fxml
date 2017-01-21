@@ -22,12 +22,12 @@
             </Pane>
             <Pane fx:id="pj1" layoutX="320.0" layoutY="550.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #429a4e;">
                <children>
-                  <Button onAction="#dobj11" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj12" layoutX="100.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj13" layoutX="474.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj14" layoutX="193.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj15" layoutX="379.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj16" layoutX="285.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj11" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#dobj11" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj12" layoutX="100.0" layoutY="8.0" mnemonicParsing="false" onAction="#dobj12" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj16" layoutX="474.0" layoutY="10.0" mnemonicParsing="false" onAction="#dobj13" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj13" layoutX="193.0" layoutY="8.0" mnemonicParsing="false" onAction="#dobj14" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj15" layoutX="379.0" layoutY="10.0" mnemonicParsing="false" onAction="#dobj15" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj14" layoutX="285.0" layoutY="9.0" mnemonicParsing="false" onAction="#dobj16" prefHeight="145.0" prefWidth="83.0" text="Button" />
                   <Label fx:id="nj1" layoutX="581.0" layoutY="140.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -57,13 +57,13 @@
                               <Label text="Bornes :" GridPane.rowIndex="4" />
                               <Label text="Points :" GridPane.columnIndex="2" />
                               <Label text="Proximité :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="." GridPane.columnIndex="3" />
-                              <Label text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label fx:id="lj11" text="." GridPane.columnIndex="1" />
+                              <Label fx:id="lj12" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lj13" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lj14" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lj15" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj16" text="." GridPane.columnIndex="3" />
+                              <Label fx:id="lj17" text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </children></Pane>
@@ -71,12 +71,12 @@
             </Pane>
             <Pane fx:id="pj2" layoutX="14.0" layoutY="8.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #e49943;">
                <children>
-                  <Button onAction="#dobj21" layoutX="385.0" layoutY="8.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj22" layoutX="477.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj23" layoutX="851.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj24" layoutX="570.0" layoutY="9.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj25" layoutX="756.0" layoutY="11.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj26" layoutX="662.0" layoutY="10.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj21" layoutX="385.0" layoutY="8.0" mnemonicParsing="false" onAction="#dobj21" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj22" layoutX="477.0" layoutY="9.0" mnemonicParsing="false" onAction="#dobj22" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj26" layoutX="851.0" layoutY="11.0" mnemonicParsing="false" onAction="#dobj23" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj23" layoutX="570.0" layoutY="9.0" mnemonicParsing="false" onAction="#dobj24" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj25" layoutX="756.0" layoutY="11.0" mnemonicParsing="false" onAction="#dobj25" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj24" layoutX="662.0" layoutY="10.0" mnemonicParsing="false" onAction="#dobj26" prefHeight="145.0" prefWidth="83.0" text="Button" />
                   <Label fx:id="nj2" layoutX="10.0" layoutY="142.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -106,13 +106,13 @@
                               <Label text="Bornes :" GridPane.rowIndex="4" />
                               <Label text="Points :" GridPane.columnIndex="2" />
                               <Label text="Proximité :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="." GridPane.columnIndex="3" />
-                              <Label text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label fx:id="lj21" text="." GridPane.columnIndex="1" />
+                              <Label fx:id="lj22" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lj23" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lj24" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lj25" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj26" text="." GridPane.columnIndex="3" />
+                              <Label fx:id="lj27" text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </children></Pane>
@@ -120,12 +120,12 @@
             </Pane>
             <Pane fx:id="pj3" layoutX="14.0" layoutY="180.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #7192e0;">
                <children>
-                  <Button onAction="#dobj31" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj32" layoutX="104.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj33" layoutX="197.0" layoutY="16.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj34" layoutX="11.0" layoutY="171.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj35" layoutX="104.0" layoutY="172.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj36" layoutX="197.0" layoutY="173.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj31" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" onAction="#dobj31" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj32" layoutX="104.0" layoutY="16.0" mnemonicParsing="false" onAction="#dobj32" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj33" layoutX="197.0" layoutY="16.0" mnemonicParsing="false" onAction="#dobj33" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj34" layoutX="11.0" layoutY="171.0" mnemonicParsing="false" onAction="#dobj34" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj35" layoutX="104.0" layoutY="172.0" mnemonicParsing="false" onAction="#dobj35" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj36" layoutX="197.0" layoutY="173.0" mnemonicParsing="false" onAction="#dobj36" prefHeight="145.0" prefWidth="83.0" text="Button" />
                   <Label fx:id="nj3" layoutX="9.0" layoutY="507.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -155,13 +155,13 @@
                               <Label text="Bornes :" GridPane.rowIndex="4" />
                               <Label text="Points :" GridPane.rowIndex="5" />
                               <Label text="Proximité :" GridPane.rowIndex="6" />
-                              <Label text="." GridPane.columnIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="lj31" text="." GridPane.columnIndex="1" />
+                              <Label fx:id="lj32" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lj33" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lj34" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lj35" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj36" text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lj37" text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                      </children></Pane>
@@ -169,12 +169,12 @@
             </Pane>
             <Pane fx:id="pj4" layoutX="976.0" layoutY="8.0" prefHeight="531.0" prefWidth="292.0" style="-fx-background-color: #e46464;">
                <children>
-                  <Button onAction="#dobj41" layoutX="11.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj42" layoutX="105.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj43" layoutX="198.0" layoutY="215.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj44" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj45" layoutX="105.0" layoutY="371.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
-                  <Button onAction="#dobj46" layoutX="198.0" layoutY="372.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj41" layoutX="11.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj41" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj42" layoutX="105.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj42" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj43" layoutX="198.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj43" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj44" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" onAction="#dobj44" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj45" layoutX="105.0" layoutY="371.0" mnemonicParsing="false" onAction="#dobj45" prefHeight="145.0" prefWidth="83.0" text="Button" />
+                  <Button fx:id="bj46" layoutX="198.0" layoutY="372.0" mnemonicParsing="false" onAction="#dobj46" prefHeight="145.0" prefWidth="83.0" text="Button" />
                   <Label fx:id="nj4" layoutX="10.0" text="..." textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
@@ -204,13 +204,13 @@
                               <Label text="Bornes :" GridPane.rowIndex="4" />
                               <Label text="Points :" GridPane.rowIndex="5" />
                               <Label text="Proximité :" GridPane.rowIndex="6" />
-                              <Label text="." GridPane.columnIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="lj41" text="." GridPane.columnIndex="1" />
+                              <Label fx:id="lj42" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lj43" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="lj44" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lj45" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj46" text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lj47" text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                      </children></Pane>
