@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,23 +22,35 @@
 	<div id="example-map-1" style="width:100%; height: 1000px;"></div>
 	
 <script type="text/javascript">
-//DÃ©finit le chemin vers le dossier contenant les images et logos de l'api
+//Définit le chemin vers le dossier contenant les images et logos de l'api
 L.Mappy.setImgPath("C:/Users/Utilisateur/Desktop/projet/api-ajax-mappy-5.4.1-12/dist/images");
 
-//CrÃ©ation de la carte
+//Création de la carte
 var Map = new L.Mappy.Map("example-map-1", {
     clientId: 'dri_24hducode',
-    center: [51.5, -0.09],
+    center: [48.0,-1.6],
     zoom: 9
 });
+var marker = L.marker([48.032726,-1.632675]).addTo(Map);
+var marker = L.marker([48.118589,-1.681614]).addTo(Map);
+var marker = L.marker([48.105875,-1.738563]).addTo(Map);
+var marker = L.marker([48.107156,-1.66578]).addTo(Map);
+var marker = L.marker([48.099284,-1.682453]).addTo(Map);
+var marker = L.marker([48.107728,-1.715724]).addTo(Map);
+var marker = L.marker([48.109156,-1.70665]).addTo(Map);
+var marker = L.marker([48.038477,-1.667452]).addTo(Map);
+var marker = L.marker([48.135868,-1.686992]).addTo(Map);
+var marker = L.marker([48.103385,-1.684231]).addTo(Map);
+var marker = L.marker([48.121728,-1.686314]).addTo(Map);
+var marker = L.marker([48.088337,-1.697446]).addTo(Map);
   
-// CrÃ©ation d'un marqueur qu'on ajoute au layer
+// Création d'un marqueur qu'on ajoute au layer
 var marker = L.marker([51.5, -0.09]).addTo(Map);
 
 
-// CrÃ©ation d'un layer contenant les marqueurs Ã  afficher
+// Création d'un layer contenant les marqueurs à afficher
 var Layer = L.layerGroup().addTo(Map);
-Â 	
+ 	
 	
 </script>
 	
