@@ -95,7 +95,7 @@ public class ControlleurIJ implements Initializable {
 	/**/
 	@FXML
 	protected void dobj11(ActionEvent event) throws IOException {
-
+		 System.out.println("doJ1");
 	}
 	@FXML
 	protected void dobj12(ActionEvent event) throws IOException {
@@ -122,7 +122,7 @@ public class ControlleurIJ implements Initializable {
 	/**/
 	@FXML
 	protected void dobj21(ActionEvent event) throws IOException {
-
+		System.out.println("doJ2");
 	}
 	@FXML
 	protected void dobj22(ActionEvent event) throws IOException {
