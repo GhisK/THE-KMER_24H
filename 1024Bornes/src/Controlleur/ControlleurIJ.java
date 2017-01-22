@@ -2,6 +2,8 @@ package Controlleur;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -10,11 +12,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class ControlleurIJ implements Initializable {
 
+	private int[] cartes = new int[19];
+	
 	@FXML private Pane pj1;
 	@FXML private Pane pj2;
 	@FXML private Pane pj3;
@@ -90,7 +93,49 @@ public class ControlleurIJ implements Initializable {
 	@Override
 	 public void initialize(URL url, ResourceBundle rb) {
 		carteM.getEngine().load("file:///D:/Devoirs/4eme_annee_ensim/PJ%2024H/THE-KMER_24H/1024Bornes/rsc/Mappy/api-ajax-mappy-5.4.1-12/dist/mappy.html");
-    }
+		//initialisation des cartes
+		cartes[CONSTANTES.Accident] = 3;
+		cartes[CONSTANTES.Panne_Essence] =  3;
+		cartes[CONSTANTES.Creve] = 3;
+		cartes[CONSTANTES.Limite_50] = 4;
+		cartes[CONSTANTES.Stop] = 5;
+		
+		cartes[CONSTANTES.Reparation] = 6;
+		cartes[CONSTANTES.Essence] = 6;
+		cartes[CONSTANTES.Secours] = 6;
+		cartes[CONSTANTES.Fin_limite]= 6;
+		cartes[CONSTANTES.Roulez] = 14;
+		
+		cartes[CONSTANTES.As_Volant] = 1;
+		cartes[CONSTANTES.Citerne] = 1;
+		cartes[CONSTANTES.Increvable] = 1;
+		cartes[CONSTANTES.Prioritaire] = 1;
+		
+		cartes[CONSTANTES.Speed25] = 10;
+		cartes[CONSTANTES.Speed50] = 10;
+		cartes[CONSTANTES.Speed75] = 10;
+		cartes[CONSTANTES.Speed100] = 12;
+		cartes[CONSTANTES.Speed200] = 14;
+		
+		if(Contoller_Acceuil.nbj == 2){
+			int valAl;
+			int[] carteJoueur1 = new int[6];
+			int[] carteJoueur2 = new int[6];
+			for(int i = 0 ;i < 6 ; i++){
+				valAl = (int) (Math.random() * ( 18 - 0 ));
+				while(cartes[valAl] == 0)
+					valAl = (int) (Math.random() * ( 18 - 0 ));
+				carteJoueur1[i] = valAl;
+				
+				valAl = (int) (Math.random() * ( 18 - 0 ));
+				while(cartes[valAl] == 0)
+					valAl = (int) (Math.random() * ( 18 - 0 ));
+				carteJoueur2[i] = valAl;
+				
+				
+			}
+		}
+	}
 	
 	/**/
 	@FXML

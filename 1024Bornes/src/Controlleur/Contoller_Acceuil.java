@@ -2,6 +2,8 @@ package Controlleur;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.ChangeListener;
@@ -23,8 +25,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Contoller_Acceuil implements Initializable{
-
-	static int nbj = 0;
+	
+	public static int nbj = 0;
 	
 	@FXML private TextField PtDepart;
 	@FXML private TextField J1;
