@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title> Titre de votre page </title>
+		<link rel="stylesheet" type="text/css" href="leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="L.Mappy.css" />
+		<script type="text/javascript" src="leaflet.js"></script>
+		<script type="text/javascript" src="L.Mappy.js"></script>
+	</head>
+	 
+	<body>
+		
+		<div id="M1024p" style="width: 640 px; height: 620px;"></div>
+		<script type="text/javascript">
+			// Définit le chemin vers le dossier contenant les images et logos de l'api
+			L.Mappy.setImgPath("D:\Devoirs\4eme_annee_ensim\Projet 24H\projet\mappyWeb\api-ajax-mappy-5.4.1-12\api-ajax-mappy-5.4.1-12\dist\images");
+			// Création de la carte
+			var exampleMap1 = new L.Mappy.Map("M1024p", {
+				clientId: 'dri_24hducode',
+				center: [43.6044, 1.44295],
+				zoom: 7
+			});	
+			
+		</script>
+
+	</body>
+</html> 

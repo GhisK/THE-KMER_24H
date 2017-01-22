@@ -1,14 +1,19 @@
 package Controlleur;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
-public class ControlleurIJ {
+public class ControlleurIJ implements Initializable {
 
 	@FXML private Pane pj1;
 	@FXML private Pane pj2;
@@ -80,6 +85,13 @@ public class ControlleurIJ {
 	@FXML private Label lj46;
 	@FXML private Label lj47;
 
+	@FXML private WebView carteM;
+	
+	@Override
+	 public void initialize(URL url, ResourceBundle rb) {
+		carteM.getEngine().load("file:///D:/Devoirs/4eme_annee_ensim/PJ%2024H/THE-KMER_24H/1024Bornes/rsc/Mappy/api-ajax-mappy-5.4.1-12/dist/mappy.html");
+    }
+	
 	/**/
 	@FXML
 	protected void dobj11(ActionEvent event) throws IOException {
