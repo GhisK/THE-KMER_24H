@@ -11,17 +11,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlleur.ControlleurIJ">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlleur.ControlleurIJ">
    <children>
       <Pane layoutX="-8.0" prefHeight="720.0" prefWidth="1280.0">
          <children>
             <Pane layoutX="320.0" layoutY="180.0" prefHeight="360.0" prefWidth="640.0" style="-fx-border-color: #000000;">
                <children>
                   <WebView fx:id="carteM" prefHeight="360.0" prefWidth="640.0" />
-                  <Button onAction="#dobk" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="261.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="83.0">
+                  <Button alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="261.0" mnemonicParsing="false" onAction="#dobk" prefHeight="97.0" prefWidth="83.0">
                      <graphic>
                         <ImageView fx:id="cb" fitHeight="83.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic></Button>
+                  <Pane layoutX="555.0" layoutY="179.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: #c9bcbc;" visible="false">
+                     <children>
+                        <Button onAction="#dopp" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Poubelle" />
+                        <Button onAction="#dopj" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Jouer" />
+                     </children>
+                  </Pane>
                </children>
             </Pane>
             <Pane fx:id="pj1" layoutX="320.0" layoutY="550.0" prefHeight="162.0" prefWidth="948.0" style="-fx-background-color: #429a4e;">
@@ -212,7 +218,7 @@
                   <Button fx:id="bj41" layoutX="11.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj41" prefHeight="145.0" prefWidth="83.0" />
                   <Button fx:id="bj42" layoutX="105.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj42" prefHeight="145.0" prefWidth="83.0" />
                   <Button fx:id="bj43" layoutX="198.0" layoutY="215.0" mnemonicParsing="false" onAction="#dobj43" prefHeight="145.0" prefWidth="83.0" />
-                  <Button fx:id="bj44" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" onAction="#dobj44" prefHeight="145.0" prefWidth="83.0" />
+                  <Button fx:id="bj44" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" onAction="#dobj44" prefHeight="145.0" prefWidth="83.0" textFill="#c9bcbc" />
                   <Button fx:id="bj45" layoutX="105.0" layoutY="371.0" mnemonicParsing="false" onAction="#dobj45" prefHeight="145.0" prefWidth="83.0" />
                   <Button fx:id="bj46" layoutX="198.0" layoutY="372.0" mnemonicParsing="false" onAction="#dobj46" prefHeight="145.0" prefWidth="83.0" />
                   <Label fx:id="nj4" layoutX="10.0" text="..." textFill="WHITE">

@@ -9,12 +9,15 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
 public class ControlleurIJ implements Initializable {
 
@@ -57,6 +60,9 @@ public class ControlleurIJ implements Initializable {
 	@FXML private Button bj45;
 	@FXML private Button bj46;
 
+	@FXML private Button bpp;
+	@FXML private Button bpj;
+	
 	@FXML private Label nj1;
 	@FXML private Label nj2;
 	@FXML private Label nj3;
@@ -177,8 +183,7 @@ public class ControlleurIJ implements Initializable {
 			
 			cacheCartesJ2();
 			
-			pioche = (int) (Math.random() * ( 18 - 0 ));
-			cb.setImage(CONSTANTES.coresNumIm(pioche));
+			cb.setImage(CONSTANTES.i19);
 		//}
 	}
 	
@@ -409,20 +414,64 @@ public class ControlleurIJ implements Initializable {
 	
 	@FXML
 	protected void dobk(ActionEvent event) throws IOException, InterruptedException {
+		
+		Stage cStage = (Stage)cb.getScene().getWindow();
+		Scene sc = cStage.getScene();
+		AnchorPane root = (AnchorPane) sc.getRoot();
+		Pane p = (Pane) root.getChildren().get(0);
+		Pane p0 = (Pane) p.getChildren().get(0);
+		Pane sp = (Pane) p0.getChildren().get(2);
+		sp.setVisible(true);
+		
+		pioche = (int) (Math.random() * ( 18 - 0 ));
+		cb.setImage(CONSTANTES.coresNumIm(pioche));
+	}
+	
+	@FXML
+	protected void dopp(ActionEvent event) throws IOException, InterruptedException {
+		Stage cStage = (Stage)cb.getScene().getWindow();
+		Scene sc = cStage.getScene();
+		AnchorPane root = (AnchorPane) sc.getRoot();
+		Pane p = (Pane) root.getChildren().get(0);
+		Pane p0 = (Pane) p.getChildren().get(0);
+		Pane sp = (Pane) p0.getChildren().get(2);
+		sp.setVisible(false);
+		
 		if(laMain == 1){
-			pioche = (int) (Math.random() * ( 18 - 0 ));
-			cb.setImage(CONSTANTES.coresNumIm(pioche));
 			laMain = 2;
 			cacheCartesJ1();
 			Thread.sleep(1000);
 			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
 		}else{
-			pioche = (int) (Math.random() * ( 18 - 0 ));
-			cb.setImage(CONSTANTES.coresNumIm(pioche));
 			laMain = 1;
 			cacheCartesJ2();
 			Thread.sleep(1000);
 			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
 		}
+		cb.setImage(CONSTANTES.i19);
+	}
+	
+	@FXML
+	protected void dopj(ActionEvent event) throws IOException, InterruptedException {
+		Stage cStage = (Stage)cb.getScene().getWindow();
+		Scene sc = cStage.getScene();
+		AnchorPane root = (AnchorPane) sc.getRoot();
+		Pane p = (Pane) root.getChildren().get(0);
+		Pane p0 = (Pane) p.getChildren().get(0);
+		Pane sp = (Pane) p0.getChildren().get(2);
+		sp.setVisible(false);
+		
+		if(laMain == 1){
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}else{
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
+		cb.setImage(CONSTANTES.i19);
 	}
 }
