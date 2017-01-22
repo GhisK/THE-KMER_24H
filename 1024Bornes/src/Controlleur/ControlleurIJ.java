@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.web.WebView;
 
@@ -88,6 +90,22 @@ public class ControlleurIJ implements Initializable {
 	@FXML private Label lj46;
 	@FXML private Label lj47;
 
+	@FXML private ImageView cb;
+	
+	@FXML private ImageView c11;
+	@FXML private ImageView c12;
+	@FXML private ImageView c13;
+	@FXML private ImageView c14;
+	@FXML private ImageView c15;
+	@FXML private ImageView c16;
+	
+	@FXML private ImageView c21;
+	@FXML private ImageView c22;
+	@FXML private ImageView c23;
+	@FXML private ImageView c24;
+	@FXML private ImageView c25;
+	@FXML private ImageView c26;
+	
 	@FXML private WebView carteM;
 	
 	@Override
@@ -117,7 +135,7 @@ public class ControlleurIJ implements Initializable {
 		cartes[CONSTANTES.Speed100] = 12;
 		cartes[CONSTANTES.Speed200] = 14;
 		
-		if(Contoller_Acceuil.nbj == 2){
+		//if(Contoller_Acceuil.nbj == 2){
 			int valAl;
 			int[] carteJoueur1 = new int[6];
 			int[] carteJoueur2 = new int[6];
@@ -126,15 +144,32 @@ public class ControlleurIJ implements Initializable {
 				while(cartes[valAl] == 0)
 					valAl = (int) (Math.random() * ( 18 - 0 ));
 				carteJoueur1[i] = valAl;
-				
+			}
+			valAl = 0;
+			for(int i = 0 ;i < 6 ; i++){
 				valAl = (int) (Math.random() * ( 18 - 0 ));
 				while(cartes[valAl] == 0)
 					valAl = (int) (Math.random() * ( 18 - 0 ));
 				carteJoueur2[i] = valAl;
-				
-				
 			}
-		}
+			
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			c12.setImage(CONSTANTES.coresNumIm(carteJoueur1[1]));
+			c13.setImage(CONSTANTES.coresNumIm(carteJoueur1[2]));
+			c14.setImage(CONSTANTES.coresNumIm(carteJoueur1[3]));
+			c15.setImage(CONSTANTES.coresNumIm(carteJoueur1[4]));
+			c16.setImage(CONSTANTES.coresNumIm(carteJoueur1[5]));
+			
+			c21.setImage(CONSTANTES.coresNumIm(carteJoueur2[0]));
+			c22.setImage(CONSTANTES.coresNumIm(carteJoueur2[1]));
+			c23.setImage(CONSTANTES.coresNumIm(carteJoueur2[2]));
+			c24.setImage(CONSTANTES.coresNumIm(carteJoueur2[3]));
+			c25.setImage(CONSTANTES.coresNumIm(carteJoueur2[4]));
+			c26.setImage(CONSTANTES.coresNumIm(carteJoueur2[5]));
+			
+			int pioche = (int) (Math.random() * ( 18 - 0 ));
+			cb.setImage(CONSTANTES.coresNumIm(pioche));
+		//}
 	}
 	
 	/**/
