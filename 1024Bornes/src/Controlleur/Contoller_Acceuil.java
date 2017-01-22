@@ -119,7 +119,6 @@ public class Contoller_Acceuil implements Initializable{
 		     Label n2 = (Label) p2.getChildren().get(6);n2.setText(j2);
 		     Label n3 = (Label) p3.getChildren().get(6);n3.setText(j3);
 		     Label n4 = (Label) p4.getChildren().get(6);n4.setText(j4);
-		     
 		     switch(nbj) {
 		     	case 2 :{
 		     		p1.setVisible(true);

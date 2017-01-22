@@ -52,6 +52,8 @@ public abstract class  CONSTANTES {
 	public static final Image i17 = new Image("/cartes/Speed100.jpg");
 	public static final Image i18 = new Image("/cartes/Speed200.jpg");
 	
+	public static final Image i19 = new Image("/cartes/Null.jpg");
+	
 	public static Image coresNumIm(int num){
 		
 		 switch(num) {
@@ -78,4 +80,29 @@ public abstract class  CONSTANTES {
 		return null;
 	}
 	
+	public static String coresNumString(int num){
+		
+		 switch(num) {
+	     	case 0 :{return "Accident";}
+	     	case 1 :{return "Panne essence";}
+			case 2 :{return "Crevaison";}
+			case 3 :{return "Limitation de vitesse";}
+	     	case 4 :{return "Feu rouge";}
+			case 5 :{return "Réparations";}
+			case 6 :{return "Essence";}
+	     	case 7 :{return "Roue de secours";}
+			case 8 :{return "Fin de limitation de vitesse ";}
+			case 9 :{return "Feu vert";}
+	     	case 10 :{return "As du volant";}
+			case 11 :{return "Camion-Citerne";}
+			case 12 :{return "Increvable";}
+	     	case 13 :{return "Prioritaire";}
+			case 14 :{return "25kms";}
+			case 15 :{return "50kms";}
+	     	case 16 :{return "75kms";}
+			case 17 :{return "100kms";}
+			case 18 :{return "200kms";}
+	     }
+		return null;
+	}
 }

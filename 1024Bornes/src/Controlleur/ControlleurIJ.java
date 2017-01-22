@@ -19,6 +19,10 @@ import javafx.scene.web.WebView;
 public class ControlleurIJ implements Initializable {
 
 	private int[] cartes = new int[19];
+	int[] carteJoueur1 = new int[6];
+	int[] carteJoueur2 = new int[6];
+	int pioche;
+	int laMain = 1;
 	
 	@FXML private Pane pj1;
 	@FXML private Pane pj2;
@@ -111,6 +115,7 @@ public class ControlleurIJ implements Initializable {
 	@Override
 	 public void initialize(URL url, ResourceBundle rb) {
 		carteM.getEngine().load("file:///D:/Devoirs/4eme_annee_ensim/PJ%2024H/THE-KMER_24H/1024Bornes/rsc/Mappy/api-ajax-mappy-5.4.1-12/dist/mappy.html");
+		
 		//initialisation des cartes
 		cartes[CONSTANTES.Accident] = 3;
 		cartes[CONSTANTES.Panne_Essence] =  3;
@@ -136,22 +141,32 @@ public class ControlleurIJ implements Initializable {
 		cartes[CONSTANTES.Speed200] = 14;
 		
 		//if(Contoller_Acceuil.nbj == 2){
-			int valAl;
-			int[] carteJoueur1 = new int[6];
-			int[] carteJoueur2 = new int[6];
+			int valAl,nbA1=0,nbA2=0;
+			
 			for(int i = 0 ;i < 6 ; i++){
 				valAl = (int) (Math.random() * ( 18 - 0 ));
 				while(cartes[valAl] == 0)
 					valAl = (int) (Math.random() * ( 18 - 0 ));
 				carteJoueur1[i] = valAl;
+				
+				if(valAl == CONSTANTES.Stop || valAl == CONSTANTES.Roulez )lj11.setText("True");else lj11.setText("False");
+				if(valAl == CONSTANTES.Limite_50)lj12.setText("True");else lj12.setText("False");
+				if(valAl == CONSTANTES.Accident) nbA1++;
 			}
+			lj13.setText(""+nbA1);
+			
 			valAl = 0;
 			for(int i = 0 ;i < 6 ; i++){
 				valAl = (int) (Math.random() * ( 18 - 0 ));
 				while(cartes[valAl] == 0)
 					valAl = (int) (Math.random() * ( 18 - 0 ));
 				carteJoueur2[i] = valAl;
+				
+				if(valAl == CONSTANTES.Stop || valAl == CONSTANTES.Roulez )lj21.setText("True");else lj21.setText("False");
+				if(valAl == CONSTANTES.Limite_50)lj22.setText("True");else lj22.setText("False");
+				if(valAl == CONSTANTES.Accident) nbA2++;
 			}
+			lj23.setText(""+nbA2);
 			
 			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
 			c12.setImage(CONSTANTES.coresNumIm(carteJoueur1[1]));
@@ -160,69 +175,184 @@ public class ControlleurIJ implements Initializable {
 			c15.setImage(CONSTANTES.coresNumIm(carteJoueur1[4]));
 			c16.setImage(CONSTANTES.coresNumIm(carteJoueur1[5]));
 			
-			c21.setImage(CONSTANTES.coresNumIm(carteJoueur2[0]));
-			c22.setImage(CONSTANTES.coresNumIm(carteJoueur2[1]));
-			c23.setImage(CONSTANTES.coresNumIm(carteJoueur2[2]));
-			c24.setImage(CONSTANTES.coresNumIm(carteJoueur2[3]));
-			c25.setImage(CONSTANTES.coresNumIm(carteJoueur2[4]));
-			c26.setImage(CONSTANTES.coresNumIm(carteJoueur2[5]));
+			cacheCartesJ2();
 			
-			int pioche = (int) (Math.random() * ( 18 - 0 ));
+			pioche = (int) (Math.random() * ( 18 - 0 ));
 			cb.setImage(CONSTANTES.coresNumIm(pioche));
 		//}
 	}
 	
+	void cacheCartesJ1(){
+		c11.setImage(CONSTANTES.i19);
+		c12.setImage(CONSTANTES.i19);
+		c13.setImage(CONSTANTES.i19);
+		c14.setImage(CONSTANTES.i19);
+		c15.setImage(CONSTANTES.i19);
+		c16.setImage(CONSTANTES.i19);
+	}
+	
+	void montreCartesJ1(int c0, int c1, int c2,int c3,int c4,int c5){
+		c11.setImage(CONSTANTES.coresNumIm(c0));
+		c12.setImage(CONSTANTES.coresNumIm(c1));
+		c13.setImage(CONSTANTES.coresNumIm(c2));
+		c14.setImage(CONSTANTES.coresNumIm(c3));
+		c15.setImage(CONSTANTES.coresNumIm(c4));
+		c16.setImage(CONSTANTES.coresNumIm(c5));
+	}
+	
+	void cacheCartesJ2(){
+		c21.setImage(CONSTANTES.i19);
+		c22.setImage(CONSTANTES.i19);
+		c23.setImage(CONSTANTES.i19);
+		c24.setImage(CONSTANTES.i19);
+		c25.setImage(CONSTANTES.i19);
+		c26.setImage(CONSTANTES.i19);
+	}
+	
+	void montreCartesJ2(int c0, int c1, int c2,int c3,int c4,int c5){
+		c21.setImage(CONSTANTES.coresNumIm(c0));
+		c22.setImage(CONSTANTES.coresNumIm(c1));
+		c23.setImage(CONSTANTES.coresNumIm(c2));
+		c24.setImage(CONSTANTES.coresNumIm(c3));
+		c25.setImage(CONSTANTES.coresNumIm(c4));
+		c26.setImage(CONSTANTES.coresNumIm(c5));
+	}
+	
 	/**/
 	@FXML
-	protected void dobj11(ActionEvent event) throws IOException {
-		 System.out.println("doJ1");
+	protected void dobj11(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[0] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 	@FXML
-	protected void dobj12(ActionEvent event) throws IOException {
-
+	protected void dobj12(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[1] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 	@FXML
-	protected void dobj13(ActionEvent event) throws IOException {
-
+	protected void dobj13(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[2] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 	@FXML
-	protected void dobj14(ActionEvent event) throws IOException {
-
+	protected void dobj14(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[3] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 	@FXML
-	protected void dobj15(ActionEvent event) throws IOException {
-
+	protected void dobj15(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[4] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 	@FXML
-	protected void dobj16(ActionEvent event) throws IOException {
-
+	protected void dobj16(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			carteJoueur1[5] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}
 	}
 
 
 	/**/
 	@FXML
-	protected void dobj21(ActionEvent event) throws IOException {
-		System.out.println("doJ2");
+	protected void dobj21(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[0] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 	@FXML
-	protected void dobj22(ActionEvent event) throws IOException {
-
+	protected void dobj22(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[1] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 	@FXML
-	protected void dobj23(ActionEvent event) throws IOException {
-
+	protected void dobj23(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[2] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 	@FXML
-	protected void dobj24(ActionEvent event) throws IOException {
-
+	protected void dobj24(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[3] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 	@FXML
-	protected void dobj25(ActionEvent event) throws IOException {
-
+	protected void dobj25(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[4] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 	@FXML
-	protected void dobj26(ActionEvent event) throws IOException {
-
+	protected void dobj26(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 2){
+			carteJoueur2[5] = (int) (Math.random() * ( 18 - 0 ));
+			c11.setImage(CONSTANTES.coresNumIm(carteJoueur1[0]));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 
 	/**/
@@ -275,5 +405,24 @@ public class ControlleurIJ implements Initializable {
 	@FXML
 	protected void dobj46(ActionEvent event) throws IOException {
 
+	}
+	
+	@FXML
+	protected void dobk(ActionEvent event) throws IOException, InterruptedException {
+		if(laMain == 1){
+			pioche = (int) (Math.random() * ( 18 - 0 ));
+			cb.setImage(CONSTANTES.coresNumIm(pioche));
+			laMain = 2;
+			cacheCartesJ1();
+			Thread.sleep(1000);
+			montreCartesJ2(carteJoueur2[0],carteJoueur2[1],carteJoueur2[2],carteJoueur2[3],carteJoueur2[4],carteJoueur2[5]);
+		}else{
+			pioche = (int) (Math.random() * ( 18 - 0 ));
+			cb.setImage(CONSTANTES.coresNumIm(pioche));
+			laMain = 1;
+			cacheCartesJ2();
+			Thread.sleep(1000);
+			montreCartesJ1(carteJoueur1[0],carteJoueur1[1],carteJoueur1[2],carteJoueur1[3],carteJoueur1[4],carteJoueur1[5]);
+		}
 	}
 }

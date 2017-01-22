@@ -18,7 +18,7 @@
             <Pane layoutX="320.0" layoutY="180.0" prefHeight="360.0" prefWidth="640.0" style="-fx-border-color: #000000;">
                <children>
                   <WebView fx:id="carteM" prefHeight="360.0" prefWidth="640.0" />
-                  <Button alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="261.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="83.0">
+                  <Button onAction="#dobk" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="261.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="83.0">
                      <graphic>
                         <ImageView fx:id="cb" fitHeight="83.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic></Button>
@@ -83,8 +83,8 @@
                               <Label fx:id="lj12" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lj13" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="lj14" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="lj15" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="lj16" text="." GridPane.columnIndex="3" />
+                              <Label fx:id="lj15" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj16" text="0" GridPane.columnIndex="3" />
                               <Label fx:id="lj17" text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
@@ -150,8 +150,8 @@
                               <Label fx:id="lj22" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lj23" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="lj24" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="lj25" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="lj26" text="." GridPane.columnIndex="3" />
+                              <Label fx:id="lj25" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj26" text="0" GridPane.columnIndex="3" />
                               <Label fx:id="lj27" text="." GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
@@ -199,8 +199,8 @@
                               <Label fx:id="lj32" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lj33" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="lj34" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="lj35" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="lj36" text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lj35" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj36" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <Label fx:id="lj37" text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
@@ -248,8 +248,8 @@
                               <Label fx:id="lj42" text="." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lj43" text="." GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="lj44" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="lj45" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="lj46" text="." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="lj45" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="lj46" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <Label fx:id="lj47" text="." GridPane.columnIndex="1" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
